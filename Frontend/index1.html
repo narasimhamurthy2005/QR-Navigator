@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GRES Explorer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Background animation layer -->
+<div class="bg-map"></div>
+
+<header>GRES Explorer</header>
+
+<div class="app-wrapper">
+
+  <div id="map-container">
+    <button id="refresh-location-btn" class="map-icon-btn" title="Update location">⟳</button>
+    <div id="map"></div>
+  </div>
+
+  <div id="controls">
+    <label>Start Location</label>
+    <select id="start"></select>
+
+    <label>Destination</label>
+    <select id="destination"></select>
+
+    <div class="info">
+      <span id="distance">Distance: 0 km</span>
+      <span id="duration">Time: 0 mins</span>
+    </div>
+
+    <div id="ai-status">AI Crowd Status: Checking…</div>
+
+    <button id="navigate-btn">Open in Google Maps</button>
+
+    <div class="secondary-actions">
+      <button id="recenter-btn">Recenter</button>
+      <button id="reset-btn">Reset</button>
+    </div>
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAD32Y2fp8elZ5XbYgui5sTt8RaO_EY01E&callback=initMap">
+</script>
+
+</body>
+</html>
